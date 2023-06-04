@@ -1,27 +1,24 @@
 //your JS code here. If required.
+//var value= prompt();
+var value= prompt();
+function SingleValue(){
+        var charObj={};
+        for(let i=0;i<value.length;i++){
+                var curchar=value[i];
+                if(charObj[curchar]==undefined)
+                        charObj[curchar]=0;
+                // else
+                        charObj[curchar]++;
+        }
+        for (const key in charObj) {
+               
+                if (charObj[key]==1) {
+                        return key;
+                        
+                }
+                
+        }
+        return null;
 
-function nonRepeating(str){
-	const char={};
-	//count frequency
-	for(let i=;i<str.length;i++){
-		const c=str[i];
-		char[c]=char[c]?char[c]+1:1;
-	}
-
-	for(let i=0;i<str.length;i++){
-		const chara=str[i];
-		if(char[chara] === 1){
-			return chara;
-		}
-	}
-	return null;
 }
-const input=prompt("Enter a string");
-const firstnonrepeat=nonRepeating(input);
-
-if(firstnonrepeat){
-	alert ("$[firstnonrepeat]");
-}
-else{
-	alert("there is no repeated character");
-}
+window.alert(SingleValue())
